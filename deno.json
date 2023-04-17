@@ -1,0 +1,48 @@
+{
+    "tasks": {
+        "dev": "deno run -A --watch src/main.ts",
+        "start": "deno run -A src/main.ts",
+        "build": "deno run -A build.ts"
+    },
+    "fmt": {
+        "options": {
+            "useTabs": false,
+            "indentWidth": 4,
+            "lineWidth": 100,
+            "singleQuote": false,
+            "semiColons": true
+        }
+    },
+    "lint": {
+        "rules": {
+            "exclude": [
+                "no-window-prefix"
+            ]
+        }
+    },
+    "compilerOptions": {
+        "jsx": "react-jsxdev",
+        "jsxImportSource": "preact",
+        "strictPropertyInitialization": false
+    },
+    "imports": {
+        "std/": "https://deno.land/std@0.181.0/",
+        "hono": "https://deno.land/x/hono@v3.1.3/mod.ts",
+        "hono/": "https://deno.land/x/hono@v3.1.3/",
+        "optic/": "https://deno.land/x/optic@1.3.7/",
+        "denosass/": "https://deno.land/x/denosass@1.0.6/",
+        "zod/": "https://deno.land/x/zod@v3.21.4/",
+        "zod-validator": "https://denopkg.com/honojs/middleware@d7e7dd245dc097e73c275a5dc6daae601caa32a6/packages/zod-validator/src/index.ts",
+        "esbuild": "https://deno.land/x/esbuild@v0.17.14/mod.js",
+        "@/": "./src/",
+        "$/": "./frontend/",
+
+        "hc": "https://esm.sh/hono@3.1.5/client",
+        "preact": "https://esm.sh/preact@10.13.2",
+        "preact/": "https://esm.sh/preact@10.13.2/",
+        "preact-router": "https://esm.sh/preact-router@4.1.0",
+        "preact-router/": "https://esm.sh/preact-router@4.1.0/",
+        "preact-feather": "https://esm.sh/preact-feather@4.2.1",
+        "preact-render-to-string": "https://esm.sh/preact-render-to-string@6.0.2"
+    }
+}
